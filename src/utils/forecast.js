@@ -11,7 +11,8 @@ const forecast=(lat, long,  callback)=>{
             }
             else{
                 callback(undefined, body.hourly.summary + ' Current temperature is ' + 
-                body.currently.temperature + ' degrees Fahrenheit')
+                body.currently.temperature + ' degrees Fahrenheit. There is a ' + 
+                (body.currently.precipProbability)*100 + ' % chance of rain.')
             }
             
         })
